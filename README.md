@@ -123,9 +123,9 @@ __Properties__
 
 ### Time-Complexity Graphs
 
-Comparing the complexity of sorting algorithms (Bubble Sort, Insertion Sort, Selection Sort)
+Comparing the complexity of sorting algorithms (Bubble Sort, Selection Sort and Insertion Sort)
 
-[Complexity Graphs](https://github.com/prateekiiest/Python/blob/master/sorts/sortinggraphs.png)
+![alt text][complexity-graph]
 
 [bubble-toptal]: https://www.toptal.com/developers/sorting-algorithms/bubble-sort
 [bubble-wiki]: https://en.wikipedia.org/wiki/Bubble_sort
@@ -156,6 +156,8 @@ Comparing the complexity of sorting algorithms (Bubble Sort, Insertion Sort, Sel
 
 [binary-wiki]: https://en.wikipedia.org/wiki/Binary_search_algorithm
 [binary-image]: https://upload.wikimedia.org/wikipedia/commons/f/f7/Binary_search_into_array.png
+
+[complexity-graph]: https://github.com/prateekiiest/Python/blob/master/sorts/sortinggraphs.png
 
 ----------------------------------------------------------------------------------
 
