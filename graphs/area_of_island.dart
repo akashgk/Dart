@@ -19,14 +19,16 @@ const List<List<int>> deltas = [
   [-1, 0], // top neighbour
   [0, 1], // right neighbour
   [1, 0], // bottom neighbour
-  [0, -1] // left neighbour.
+  [0, -1], // left neighbour.
 ];
 
 int maxAreaOfIsland(List<List<int>> grid) {
   int numRows = grid.length;
   int numCols = grid[0].length;
-  List<List<bool>> visited =
-      List.generate(numRows, (int index) => List.filled(numCols, false));
+  List<List<bool>> visited = List.generate(
+    numRows,
+    (int index) => List.filled(numCols, false),
+  );
 
   List<int> areas = [];
   for (int i = 0; i < numRows; ++i) {
@@ -43,7 +45,11 @@ bool isInvalidIndex(int i, int j, int rowCount, int colCount) {
 }
 
 List<List<int>> adjacentNodes(
-    List<List<int>> grid, List<List<bool>> visited, int x, int y) {
+  List<List<int>> grid,
+  List<List<bool>> visited,
+  int x,
+  int y,
+) {
   List<List<int>> nodes = [];
   for (int i = 0; i < deltas.length; ++i) {
     int dx = x + deltas[i][0];
@@ -57,11 +63,16 @@ List<List<int>> adjacentNodes(
   return nodes;
 }
 
-void traverseNode(int i, int j, List<List<int>> grid, List<List<bool>> visited,
-    List<int> areas) {
+void traverseNode(
+  int i,
+  int j,
+  List<List<int>> grid,
+  List<List<bool>> visited,
+  List<int> areas,
+) {
   int area = 0;
   List<List<int>> nodesToExplore = [
-    [i, j]
+    [i, j],
   ];
   while (nodesToExplore.isNotEmpty) {
     List<int> node = nodesToExplore.removeLast();
@@ -91,7 +102,7 @@ void main() {
       [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+      [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
     ];
     expect(maxAreaOfIsland(island), 6);
   });

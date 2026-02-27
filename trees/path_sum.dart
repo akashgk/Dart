@@ -36,23 +36,8 @@ bool hasPathSum(TreeNode root, int targetSum) {
 void main() {
   TreeNode root = TreeNode(
     5,
-    TreeNode(
-      4,
-      TreeNode(
-        11,
-        TreeNode(7),
-        TreeNode(2),
-      ),
-    ),
-    TreeNode(
-      8,
-      TreeNode(13),
-      TreeNode(
-        4,
-        null,
-        TreeNode(1),
-      ),
-    ),
+    TreeNode(4, TreeNode(11, TreeNode(7), TreeNode(2))),
+    TreeNode(8, TreeNode(13), TreeNode(4, null, TreeNode(1))),
   );
 
   test('Test Case 1: true case', () {

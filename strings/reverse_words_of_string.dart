@@ -34,7 +34,9 @@ void main() {
   });
 
   test("reverseStringWords", () {
-    expect(reverseStringWords("abhishek.is.a.good.boy"),
-        equals("boy.good.a.is.abhishek"));
+    expect(
+      reverseStringWords("abhishek.is.a.good.boy"),
+      equals("boy.good.a.is.abhishek"),
+    );
   });
 }

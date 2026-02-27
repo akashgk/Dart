@@ -8,7 +8,7 @@ class Node<T> {
   Node.before(this.next, this.value);
 }
 
-class LinkedListIterator<T> extends Iterator<T?> {
+class LinkedListIterator<T> implements Iterator<T?> {
   Node<T?>? _current;
 
   @override

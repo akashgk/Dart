@@ -28,8 +28,8 @@ class MaxHeap {
 
   void _siftUp(int currentIndex) {
     int parentIndex = (currentIndex - 1) ~/ 2;
-    while (
-        parentIndex >= 0 && this.heap[parentIndex] < this.heap[currentIndex]) {
+    while (parentIndex >= 0 &&
+        this.heap[parentIndex] < this.heap[currentIndex]) {
       _swap(parentIndex, currentIndex, this.heap);
       currentIndex = parentIndex;
       parentIndex = (currentIndex - 1) ~/ 2;
@@ -41,8 +41,9 @@ class MaxHeap {
     int childTwoIndex;
 
     while (childOneIndex <= endIndex) {
-      childTwoIndex =
-          2 * currentIndex + 2 <= endIndex ? 2 * currentIndex + 2 : -1;
+      childTwoIndex = 2 * currentIndex + 2 <= endIndex
+          ? 2 * currentIndex + 2
+          : -1;
       int indexToSwap;
       if (childTwoIndex != -1 && heap[childTwoIndex] > heap[childOneIndex]) {
         indexToSwap = childTwoIndex;

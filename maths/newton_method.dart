@@ -6,8 +6,12 @@ double derivative(double Function(double) f, double x, [double h = 1e-10]) {
 }
 
 /// Find root of given [f] (x where [f(x)] == 0)
-double findRoot(double Function(double) f,
-    [double initialValue = 0, int iterations = 10, double h = 1e-10]) {
+double findRoot(
+  double Function(double) f, [
+  double initialValue = 0,
+  int iterations = 10,
+  double h = 1e-10,
+]) {
   double currentValue = initialValue;
   for (int i = 0; i < iterations; i++) {
     currentValue -= f(currentValue) / derivative(f, currentValue);

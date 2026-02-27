@@ -12,9 +12,15 @@ int find_max_recursion(List numbers, int low, int high) {
     return numbers[low]; // or numbers[high]
   }
   int mid = (low + high) >> 1;
-  int leftMax =
-      find_max_recursion(numbers, low, mid); /* max in range [low mid] */
+  int leftMax = find_max_recursion(
+    numbers,
+    low,
+    mid,
+  ); /* max in range [low mid] */
   int rightMax = find_max_recursion(
-      numbers, mid + 1, high); /* max in range [mid + 1, high] */
+    numbers,
+    mid + 1,
+    high,
+  ); /* max in range [mid + 1, high] */
   return leftMax >= rightMax ? leftMax : rightMax;
 }

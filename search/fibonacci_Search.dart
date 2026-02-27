@@ -42,7 +42,6 @@ int fibMaonaccianSearch(List arr, int x, int n) {
       fibMMm2 = fibM - fibMMm1;
       offset = i;
     }
-
     /* If x is greater than the value at index fibMmm2
      * cut the subarray array after i + 1.
      */
@@ -51,7 +50,6 @@ int fibMaonaccianSearch(List arr, int x, int n) {
       fibMMm1 = fibMMm1 - fibMMm2;
       fibMMm2 = fibM - fibMMm1;
     }
-
     //elwment found.Return index
     else {
       return i;

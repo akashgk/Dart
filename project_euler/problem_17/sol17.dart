@@ -23,7 +23,7 @@ const ONES = [
   'Seven',
   'Eight',
   'Nine',
-  'Ten'
+  'Ten',
 ];
 
 const TEN_TWENTY = [
@@ -35,7 +35,7 @@ const TEN_TWENTY = [
   'Sixteen',
   'Seventeen',
   'Eighteen',
-  'Nineteen'
+  'Nineteen',
 ];
 
 const TENS = [
@@ -47,7 +47,7 @@ const TENS = [
   'Sixty',
   'Seventy',
   'Eighty',
-  'Ninety'
+  'Ninety',
 ];
 
 const HUNDRED = 'Hundred';

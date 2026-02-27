@@ -32,7 +32,8 @@ int hexadecimal_to_decimal(String hex_string) {
         hex_table.containsKey(hex_string[i]) == false) {
       throw Exception("Non-hex value was passed to the function");
     } else {
-      decimal_val += pow(16, hex_string.length - i - 1).toInt() *
+      decimal_val +=
+          pow(16, hex_string.length - i - 1).toInt() *
           (int.tryParse(hex_string[i]) ?? hex_table[hex_string[i]] ?? 0);
     }
   }

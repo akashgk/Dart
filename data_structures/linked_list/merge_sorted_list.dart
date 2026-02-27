@@ -69,18 +69,26 @@ ListNode? mergeTwoLists(ListNode? list1, ListNode? list2) {
 
 void main() {
   test('test case 1', () {
-    ListNode head1 =
-        ListNode(val: 1, next: ListNode(val: 2, next: ListNode(val: 4)));
-    ListNode head2 =
-        ListNode(val: 1, next: ListNode(val: 3, next: ListNode(val: 4)));
+    ListNode head1 = ListNode(
+      val: 1,
+      next: ListNode(val: 2, next: ListNode(val: 4)),
+    );
+    ListNode head2 = ListNode(
+      val: 1,
+      next: ListNode(val: 3, next: ListNode(val: 4)),
+    );
     expect(mergeTwoLists(head1, head2).listValues(), [1, 1, 2, 3, 4, 4]);
   });
 
   test('test case 2', () {
-    ListNode head1 =
-        ListNode(val: 1, next: ListNode(val: 2, next: ListNode(val: 3)));
-    ListNode head2 =
-        ListNode(val: 4, next: ListNode(val: 5, next: ListNode(val: 6)));
+    ListNode head1 = ListNode(
+      val: 1,
+      next: ListNode(val: 2, next: ListNode(val: 3)),
+    );
+    ListNode head2 = ListNode(
+      val: 4,
+      next: ListNode(val: 5, next: ListNode(val: 6)),
+    );
     expect(mergeTwoLists(head1, head2).listValues(), [1, 2, 3, 4, 5, 6]);
   });
 }

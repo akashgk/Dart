@@ -64,7 +64,8 @@ String hexadecimal_to_octal(String hex_val) {
         break;
       default:
         throw new FormatException(
-            "An invalid value was passed to the function");
+          "An invalid value was passed to the function",
+        );
     }
   }
 

@@ -14,7 +14,8 @@ int binaryToDecimal(String binaryString) {
     if ("01".contains(binaryString[i]) == false) {
       throw FormatException("Non-binary value was passed to the function");
     } else {
-      decimalValue += (pow(2, binaryString.length - i - 1).toInt() *
+      decimalValue +=
+          (pow(2, binaryString.length - i - 1).toInt() *
           (int.tryParse(binaryString[i]) ?? 0));
     }
   }
