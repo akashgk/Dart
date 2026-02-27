@@ -30,20 +30,24 @@ void main() {
   a = 15;
   b = 20;
   //print the result
-  print("LCM of " +
-      a.toString() +
-      " and " +
-      b.toString() +
-      " is " +
-      lcm(a, b).toString());
+  print(
+    "LCM of " +
+        a.toString() +
+        " and " +
+        b.toString() +
+        " is " +
+        lcm(a, b).toString(),
+  );
   //Test case2:
   a = 12;
   b = 18;
   //print the result
-  print("LCM of " +
-      a.toString() +
-      " and " +
-      b.toString() +
-      " is " +
-      lcm(a, b).toString());
+  print(
+    "LCM of " +
+        a.toString() +
+        " and " +
+        b.toString() +
+        " is " +
+        lcm(a, b).toString(),
+  );
 }

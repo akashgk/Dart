@@ -12,9 +12,15 @@ int find_min_recursion(List numbers, int low, int high) {
     return numbers[low]; // or numbers[high]
   }
   int mid = (low + high) >> 1;
-  int leftMin =
-      find_min_recursion(numbers, low, mid); /* min in range [low mid] */
+  int leftMin = find_min_recursion(
+    numbers,
+    low,
+    mid,
+  ); /* min in range [low mid] */
   int rightMin = find_min_recursion(
-      numbers, mid + 1, high); /* min in range [mid + 1, high] */
+    numbers,
+    mid + 1,
+    high,
+  ); /* min in range [mid + 1, high] */
   return leftMin <= rightMin ? leftMin : rightMin;
 }

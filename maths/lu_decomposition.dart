@@ -280,11 +280,13 @@ double f(double x, double y) {
 }
 
 void main() {
-  Matrix a = new Matrix(values: [
-    [3, 2, -1],
-    [2, -2, 4],
-    [-1, 0.5, -1]
-  ]);
+  Matrix a = new Matrix(
+    values: [
+      [3, 2, -1],
+      [2, -2, 4],
+      [-1, 0.5, -1],
+    ],
+  );
   List<double> b = [1, -2, 0];
 
   List<double> solution = solve(a, b);

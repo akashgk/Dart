@@ -61,7 +61,7 @@ void main() {
 
     List<List<int>> edges = [
       [0, 1],
-      [0, 2]
+      [0, 2],
     ];
     Graph graph = Graph(nodes);
 
@@ -71,8 +71,11 @@ void main() {
       graph.addEdges(start, end);
     }
     int startNode = 0;
-    List<int> answer =
-        breadthFirstSearch(graph, graph.numberOfNodesInGraph, startNode);
+    List<int> answer = breadthFirstSearch(
+      graph,
+      graph.numberOfNodesInGraph,
+      startNode,
+    );
     expect(answer, equals([0, 1, 2]));
   });
 
@@ -84,7 +87,7 @@ void main() {
       [0, 1],
       [0, 2],
       [0, 3],
-      [2, 4]
+      [2, 4],
     ];
     Graph graph = Graph(nodes);
 
@@ -94,8 +97,11 @@ void main() {
       graph.addEdges(start, end);
     }
     int startNode = 0;
-    List<int> answer =
-        breadthFirstSearch(graph, graph.numberOfNodesInGraph, startNode);
+    List<int> answer = breadthFirstSearch(
+      graph,
+      graph.numberOfNodesInGraph,
+      startNode,
+    );
     expect(answer, equals([0, 1, 2, 3, 4]));
   });
 }

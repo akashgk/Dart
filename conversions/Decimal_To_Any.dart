@@ -31,7 +31,7 @@ String decimalToAny(int value, int base) {
     32: 'W',
     33: 'X',
     34: 'Y',
-    35: 'Z'
+    35: 'Z',
   };
 
   if (value == 0) return "0";
@@ -48,7 +48,8 @@ String decimalToAny(int value, int base) {
   while (value > 0) {
     int remainder = value % base;
     value = value ~/ base;
-    output = (remainder < 10
+    output =
+        (remainder < 10
             ? remainder.toString()
             : ALPHABET_VALUES[remainder] ?? '0') +
         output;

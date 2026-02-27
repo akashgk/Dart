@@ -56,8 +56,10 @@ void depthFirstSearchHelper(graph, visitedNodes, node, answer) {
 }
 
 List<int> depthFirstSearch(Graph graph, int numberOfNodes, int startNode) {
-  List<bool> visitedNodes =
-      new List<bool>.generate(numberOfNodes, (index) => false);
+  List<bool> visitedNodes = new List<bool>.generate(
+    numberOfNodes,
+    (index) => false,
+  );
 
   List<int> answer = [];
   depthFirstSearchHelper(graph.graph, visitedNodes, startNode, answer);
@@ -72,7 +74,7 @@ void main() {
     List<List<int>> edges = [
       [0, 1],
       [1, 2],
-      [0, 3]
+      [0, 3],
     ];
     Graph graph = Graph(nodes);
 
@@ -82,8 +84,11 @@ void main() {
       graph.addEdges(start, end);
     }
     int startNode = 0;
-    List<int> answer =
-        depthFirstSearch(graph, graph.numberOfNodesInGraph, startNode);
+    List<int> answer = depthFirstSearch(
+      graph,
+      graph.numberOfNodesInGraph,
+      startNode,
+    );
     expect(answer, equals([0, 1, 2, 3]));
   });
 
@@ -95,7 +100,7 @@ void main() {
       [0, 1],
       [0, 2],
       [0, 3],
-      [2, 4]
+      [2, 4],
     ];
     Graph graph = Graph(nodes);
 
@@ -105,8 +110,11 @@ void main() {
       graph.addEdges(start, end);
     }
     int startNode = 0;
-    List<int> answer =
-        depthFirstSearch(graph, graph.numberOfNodesInGraph, startNode);
+    List<int> answer = depthFirstSearch(
+      graph,
+      graph.numberOfNodesInGraph,
+      startNode,
+    );
     expect(answer, equals([0, 1, 2, 4, 3]));
   });
 }

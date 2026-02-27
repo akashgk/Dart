@@ -61,8 +61,10 @@ int main() {
     expect(countSort(lst), equals(lst));
   });
   test("count sort", () {
-    expect(countSort([34, -2, 122, 24435, 23, 434, 232, 1323]),
-        equals([-2, 23, 34, 122, 232, 434, 1323, 24435]));
+    expect(
+      countSort([34, -2, 122, 24435, 23, 434, 232, 1323]),
+      equals([-2, 23, 34, 122, 232, 434, 1323, 24435]),
+    );
   });
 
   print(countSort([-10, -4, 1, 5, 2, -2]));

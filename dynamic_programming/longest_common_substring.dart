@@ -53,8 +53,11 @@ void main() {
   });
   test(('testCase #10'), () {
     expect(
-        longestCommonSubstring(
-            "OldSite:GeeksforGeeks.org", "NewSite:GeeksQuiz.com"),
-        equals(10));
+      longestCommonSubstring(
+        "OldSite:GeeksforGeeks.org",
+        "NewSite:GeeksQuiz.com",
+      ),
+      equals(10),
+    );
   });
 }

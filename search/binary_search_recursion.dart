@@ -22,9 +22,17 @@ int binarySearch(List<int> list, int low, int high, int key) {
     return mid; /* found */
   } else if (key > list[mid]) {
     return binarySearch(
-        list, mid + 1, high, key); /* search in range[mid + 1, high] */
+      list,
+      mid + 1,
+      high,
+      key,
+    ); /* search in range[mid + 1, high] */
   } else {
     return binarySearch(
-        list, low, mid - 1, key); /* search in range[low, mid - 1] */
+      list,
+      low,
+      mid - 1,
+      key,
+    ); /* search in range[low, mid - 1] */
   }
 }

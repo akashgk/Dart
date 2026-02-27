@@ -20,7 +20,7 @@ List<int> ArabianRomanNumbers = [
   9,
   5,
   4,
-  1
+  1,
 ];
 
 List<String> RomanNumbers = [
@@ -36,7 +36,7 @@ List<String> RomanNumbers = [
   "IX",
   "V",
   "IV",
-  "I"
+  "I",
 ];
 
 List<String> integer_to_roman(int num) {

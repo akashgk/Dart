@@ -32,7 +32,8 @@ int value(var r) {
     return 100;
   else if (r == 'D')
     return 500;
-  else if (r == 'M') return 1000;
+  else if (r == 'M')
+    return 1000;
   return 0;
 }
 

@@ -33,24 +33,24 @@ bool carPooling(List<List<int>> trips, int capacity) {
 void main() {
   List<List<int>> trips = [
     [2, 1, 5],
-    [3, 3, 7]
+    [3, 3, 7],
   ];
 
   List<List<int>> trips1 = [
     [2, 1, 5],
-    [3, 5, 7]
+    [3, 5, 7],
   ];
 
   List<List<int>> trips2 = [
     [2, 2, 6],
     [2, 4, 7],
-    [8, 6, 7]
+    [8, 6, 7],
   ];
 
   List<List<int>> trips3 = [
     [7, 5, 6],
     [6, 7, 8],
-    [10, 1, 6]
+    [10, 1, 6],
   ];
 
   test('test case 1', () => expect(carPooling(trips, 4), false));

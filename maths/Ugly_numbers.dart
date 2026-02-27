@@ -23,7 +23,7 @@ int getNthUglyNo(int n) {
   int i = 1;
   int count = 1; /* ugly number count */
 
-/*Check for all integers untill ugly count 
+  /*Check for all integers untill ugly count 
 	becomes n*/
   while (n > count) {
     i++;

@@ -71,19 +71,16 @@ Graph fromPoints(List<Point> points) {
 }
 
 void main() {
-  Graph graph = Graph([
-    "A",
-    "B",
-    "C",
-    "D",
-    "E"
-  ], [
-    [0, 12, 4, 54, 100],
-    [3, 0, 5, 1, 1],
-    [300, 20, 0, 433, 123],
-    [32, 31, 54, 0, 3],
-    [2, 65, 12, 32, 0]
-  ]);
+  Graph graph = Graph(
+    ["A", "B", "C", "D", "E"],
+    [
+      [0, 12, 4, 54, 100],
+      [3, 0, 5, 1, 1],
+      [300, 20, 0, 433, 123],
+      [32, 31, 54, 0, 3],
+      [2, 65, 12, 32, 0],
+    ],
+  );
 
   print(nearestNeighbourSearch(graph));
 
@@ -94,7 +91,7 @@ void main() {
     new Point(3.33, 8.11),
     new Point(12, 11),
     new Point(-1, 1),
-    new Point(-2, 2)
+    new Point(-2, 2),
   ];
 
   print(nearestNeighbourSearch(fromPoints(points)));

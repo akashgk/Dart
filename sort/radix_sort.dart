@@ -25,13 +25,18 @@ main() {
     expect(radixSort(lst), equals(lst));
   });
   test("radix sort", () {
-    expect(radixSort([34, -2, 122, 24435, 23, 434, 232, 1323]),
-        equals([-2, 23, 34, 122, 232, 434, 1323, 24435]));
+    expect(
+      radixSort([34, -2, 122, 24435, 23, 434, 232, 1323]),
+      equals([-2, 23, 34, 122, 232, 434, 1323, 24435]),
+    );
   });
 
   final seed = 10, rnd = Random(), length = 10;
-  var list =
-      List<int>.generate(length, (i) => rnd.nextInt(seed), growable: false);
+  var list = List<int>.generate(
+    length,
+    (i) => rnd.nextInt(seed),
+    growable: false,
+  );
   print('before sorting:');
   print(list);
   print('----------------------------------------------');

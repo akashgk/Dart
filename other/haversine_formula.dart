@@ -26,7 +26,8 @@ double distance(Coordinates p1, Coordinates p2) {
   double latitude2 = radians(p2.latitude);
   double longitudeChange = radians(p2.longitude - p1.longitude);
 
-  double a = haversine(latitudeChange) +
+  double a =
+      haversine(latitudeChange) +
       cos(latitude1) * cos(latitude2) * haversine(longitudeChange);
   double c = 2 * atan2(sqrt(a), sqrt(1 - a));
 
