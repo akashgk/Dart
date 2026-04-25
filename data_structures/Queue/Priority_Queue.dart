@@ -1,3 +1,5 @@
+import 'package:test/test.dart';
+
 class PriorityQueue<T> {
   List<QueueItem<T>> _dataStore = <QueueItem<T>>[];
 
@@ -62,14 +64,22 @@ class QueueItem<T> {
 }
 
 void main() {
-  PriorityQueue<int> queue = new PriorityQueue();
-  queue.enqueue(1, 2);
-  queue.enqueue(2, 1);
-  queue.enqueue(3, 3);
-  queue.enqueue(4, 2);
+  test("Enqueue and dequeue based on priority", () {
+    PriorityQueue<int> queue = new PriorityQueue();
+    queue.enqueue(1, 2);
+    queue.enqueue(2, 1);
+    queue.enqueue(3, 3);
+    queue.enqueue(4, 2);
 
-  print(queue.dequeue());
-  print(queue.dequeue());
-  print(queue.dequeue());
-  print(queue.dequeue());
+    expect(queue.size, equals(4));
+    expect(queue.front, equals(2)); // priority 1
+
+    expect(queue.dequeue(), equals(2));
+    expect(queue.dequeue(), equals(1)); // priority 2, enqueued first
+    expect(queue.dequeue(), equals(4)); // priority 2
+    expect(queue.dequeue(), equals(3)); // priority 3
+
+    expect(queue.isEmpty, isTrue);
+    expect(queue.dequeue(), isNull);
+  });
 }

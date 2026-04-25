@@ -1,3 +1,5 @@
+import 'package:test/test.dart';
+
 //Author:Shawn
 //Email:stepfencurryxiao@gmail.com
 
@@ -71,18 +73,25 @@ bool is_full_binary_tree(var tree) {
 
 //Main function for testing
 void main() {
-  var tree = Node(1);
-  tree.left = Node(2);
-  tree.right = Node(3);
-  tree.left.left = Node(4);
-  tree.left.right = Node(5);
-  tree.left.right.left = Node(6);
-  tree.right.left = Node(7);
-  tree.right.left.left = Node(8);
-  tree.right.left.left.right = Node(9);
+  test("Tree operations", () {
+    var tree = Node(1);
+    tree.left = Node(2);
+    tree.right = Node(3);
+    tree.left.left = Node(4);
+    tree.left.right = Node(5);
+    tree.left.right.left = Node(6);
+    tree.right.left = Node(7);
+    tree.right.left.left = Node(8);
+    tree.right.left.left.right = Node(9);
 
-  print(is_full_binary_tree(tree));
-  print(depth_of_tree(tree));
-  print("Tree is:\n");
-  display(tree);
+    expect(is_full_binary_tree(tree), isFalse);
+    expect(depth_of_tree(tree), equals(5.0));
+  });
+
+  test("is_full_binary_tree on full tree", () {
+    var fullTree = Node(1);
+    fullTree.left = Node(2);
+    fullTree.right = Node(3);
+    expect(is_full_binary_tree(fullTree), isTrue);
+  });
 }

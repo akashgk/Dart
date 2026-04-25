@@ -1,3 +1,5 @@
+import 'package:test/test.dart';
+
 //Author:Shawn
 //Email:stepfencurryxiao@gmail.com
 
@@ -103,26 +105,22 @@ class HashMap {
 }
 
 void main() {
-  HashMap h = new HashMap(hsize: 7);
+  test("Insert and Delete from HashMap", () {
+    HashMap h = new HashMap(hsize: 7);
 
-  print("Add key 5");
-  h.insertHash(5);
+    h.insertHash(5);
+    h.insertHash(28);
+    h.insertHash(1);
 
-  print("Add key 28");
-  h.insertHash(28);
+    expect(h.buckets[5].head?.data, equals(5));
+    // 28 % 7 = 0
+    expect(h.buckets[0].head?.data, equals(28));
+    expect(h.buckets[1].head?.data, equals(1));
 
-  print("Add key 1");
-  h.insertHash(1);
+    h.deleteHash(28);
+    expect(h.buckets[0].head, isNull);
 
-  print("Delete Key 28");
-  h.deleteHash(28);
-
-  print("Print Table:\n");
-  h.displayHashtable();
-
-  print("Delete Key 1");
-  h.deleteHash(1);
-
-  print("Print Table:\n");
-  h.displayHashtable();
+    h.deleteHash(1);
+    expect(h.buckets[1].head, isNull);
+  });
 }

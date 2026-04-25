@@ -1,3 +1,5 @@
+import 'package:test/test.dart';
+
 //Author: Shawn
 //Email: stepfencurryxiao@gmail.com
 
@@ -57,20 +59,27 @@ class LinkedListStack<T> {
   }
 }
 
-int main() {
-  LinkedListStack<String> Stack = new LinkedListStack<String>();
-  var returnData;
-  print("Push 2 5 9 7 to the stack\n");
-  Stack.push("2");
-  Stack.push("5");
-  Stack.push("9");
-  Stack.push("7");
-  print("Successful push!\n");
-  returnData = Stack.pop();
-  print("Pop a data: $returnData\n");
-  returnData = Stack.pop();
-  print("Pop a data: $returnData\n");
-  returnData = Stack.pop();
-  print("Pop a data: $returnData\n");
-  return 0;
+void main() {
+  test("Push and Pop elements from LinkedListStack", () {
+    LinkedListStack<String> stack = new LinkedListStack<String>();
+
+    expect(stack.isEmpty(), isTrue);
+    expect(stack.getSize(), equals(0));
+
+    stack.push("2");
+    stack.push("5");
+    stack.push("9");
+    stack.push("7");
+
+    expect(stack.isEmpty(), isFalse);
+    expect(stack.getSize(), equals(4));
+
+    expect(stack.pop(), equals("7"));
+    expect(stack.pop(), equals("9"));
+    expect(stack.pop(), equals("5"));
+    expect(stack.pop(), equals("2"));
+
+    expect(stack.isEmpty(), isTrue);
+    expect(stack.pop(), isNull);
+  });
 }

@@ -1,5 +1,4 @@
-import 'package:test/expect.dart';
-import 'package:test/scaffolding.dart';
+import 'package:test/test.dart';
 
 class ArrayStack<T> {
   /// [stack]
@@ -45,50 +44,37 @@ class ArrayStack<T> {
 }
 
 void main() {
-  ArrayStack<String> arrayStack = new ArrayStack<String>(6);
-
-  arrayStack.push('1');
-  arrayStack.push("2");
-  arrayStack.push('3');
-  arrayStack.push("4");
-  arrayStack.push('5');
-  arrayStack.push("6");
-
-  test('test case 1', () {
-    expect(arrayStack.stack, ['1', '2', '3', '4', '5', '6']);
+  test('test case 1: push and get stack', () {
+    ArrayStack<String> arrayStack = new ArrayStack<String>(6);
+    arrayStack.push('1');
+    arrayStack.push("2");
+    arrayStack.push('3');
+    arrayStack.push("4");
+    arrayStack.push('5');
+    arrayStack.push("6");
+    expect(arrayStack.stack, equals(['1', '2', '3', '4', '5', '6']));
   });
 
-  test('test case 2: pop stack', () {
-    expect('6', arrayStack.pop());
+  test('test case 2: pop stack items', () {
+    ArrayStack<String> arrayStack = new ArrayStack<String>(6);
+    arrayStack.push('1');
+    arrayStack.push("2");
+    arrayStack.push('3');
+    arrayStack.push("4");
+    arrayStack.push('5');
+    arrayStack.push("6");
+
+    expect(arrayStack.pop(), equals('6'));
+    expect(arrayStack.pop(), equals('5'));
+    expect(arrayStack.pop(), equals('4'));
+    expect(arrayStack.pop(), equals('3'));
+    expect(arrayStack.pop(), equals('2'));
+    expect(arrayStack.pop(), equals('1'));
+    expect(arrayStack.pop(), isNull);
   });
 
-  test('test case 3: pop stack', () {
-    expect('5', arrayStack.pop());
-  });
-
-  test('test case 4: pop stack', () {
-    expect('4', arrayStack.pop());
-  });
-
-  test('test case 5: pop stack', () {
-    expect('3', arrayStack.pop());
-  });
-
-  test('test case 6: pop stack', () {
-    expect('2', arrayStack.pop());
-  });
-
-  test('test case 7: pop stack', () {
-    expect('1', arrayStack.pop());
-  });
-
-  test('test case 8: pop stack', () {
-    expect(null, arrayStack.pop());
-  });
-
-  ArrayStack<String> arrayStack2 = new ArrayStack<String>(3);
-
-  test('test case 9', () {
-    expect(arrayStack2.stack, [null, null, null]);
+  test('test case 9: empty stack', () {
+    ArrayStack<String> arrayStack2 = new ArrayStack<String>(3);
+    expect(arrayStack2.stack, equals([null, null, null]));
   });
 }
