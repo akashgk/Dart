@@ -73,12 +73,12 @@ void main() {
 
     expect(queue.size, equals(4));
     expect(queue.front, equals(2)); // priority 1
-    
+
     expect(queue.dequeue(), equals(2));
     expect(queue.dequeue(), equals(1)); // priority 2, enqueued first
     expect(queue.dequeue(), equals(4)); // priority 2
     expect(queue.dequeue(), equals(3)); // priority 3
-    
+
     expect(queue.isEmpty, isTrue);
     expect(queue.dequeue(), isNull);
   });

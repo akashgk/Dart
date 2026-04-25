@@ -62,7 +62,7 @@ class LinkedListStack<T> {
 void main() {
   test("Push and Pop elements from LinkedListStack", () {
     LinkedListStack<String> stack = new LinkedListStack<String>();
-    
+
     expect(stack.isEmpty(), isTrue);
     expect(stack.getSize(), equals(0));
 
@@ -78,7 +78,7 @@ void main() {
     expect(stack.pop(), equals("9"));
     expect(stack.pop(), equals("5"));
     expect(stack.pop(), equals("2"));
-    
+
     expect(stack.isEmpty(), isTrue);
     expect(stack.pop(), isNull);
   });

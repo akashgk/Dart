@@ -63,7 +63,7 @@ void main() {
     arrayStack.push("4");
     arrayStack.push('5');
     arrayStack.push("6");
-    
+
     expect(arrayStack.pop(), equals('6'));
     expect(arrayStack.pop(), equals('5'));
     expect(arrayStack.pop(), equals('4'));

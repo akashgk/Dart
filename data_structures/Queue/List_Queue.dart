@@ -47,21 +47,21 @@ class ListQueue<T> {
 void main() {
   test("Enqueue and deque elements", () {
     ListQueue<int> queue = new ListQueue<int>();
-    
-    // Note: The original hasElements returns true if queue.length > 0, 
+
+    // Note: The original hasElements returns true if queue.length > 0,
     // but queue is initialized with length MAX_SIZE (10), so it always returns true.
-    expect(queue.hasElements(), isTrue); 
-    
+    expect(queue.hasElements(), isTrue);
+
     queue.enque(12);
     queue.enque(2);
     queue.enque(7);
-    
+
     expect(queue.queue.sublist(0, 3), equals([12, 2, 7]));
-    
+
     expect(queue.deque(), equals(12));
     expect(queue.deque(), equals(2));
     expect(queue.deque(), equals(7));
-    
+
     // Deque on empty
     expect(queue.deque(), isNull);
   });
