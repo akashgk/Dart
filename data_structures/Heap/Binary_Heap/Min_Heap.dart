@@ -1,3 +1,5 @@
+import 'package:test/test.dart';
+
 //Author:Shawn
 //Email:stepfencurryxiao@gmail.com
 
@@ -72,7 +74,9 @@ List buildHead(List arr, int length) {
 }
 
 void main() {
-  List arr = [1, 3, 0, 5, 4, 6, 7, 8, 9];
-  List BinaryHeap = buildHead(arr, arr.length);
-  print(BinaryHeap);
+  test("buildHead creates a min heap", () {
+    List arr = [1, 3, 0, 5, 4, 6, 7, 8, 9];
+    List binaryHeap = buildHead(arr, arr.length);
+    expect(binaryHeap, equals([0, 3, 1, 5, 4, 6, 7, 8, 9]));
+  });
 }
